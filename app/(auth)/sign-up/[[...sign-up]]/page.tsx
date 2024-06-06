@@ -26,7 +26,7 @@ export default function SignUpPage() {
 
       <div className="hidden h-full items-center justify-center bg-blue-600 lg:flex">
         <Image
-          src="/vaxplus.jpg"
+          src="/vaxplus_logo.png"
           height={200}
           width={200}
           alt="logo"
