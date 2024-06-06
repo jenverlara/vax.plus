@@ -1,0 +1,48 @@
+{
+  "version": "6",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1715486676254,
+      "tag": "0000_right_frightful_four",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1717212878240,
+      "tag": "0001_gray_ultron",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1717222586197,
+      "tag": "0002_numerous_shape",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1717633841314,
+      "tag": "0003_flaky_anthem",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1717639026937,
+      "tag": "0004_milky_jean_grey",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1717639962000,
+      "tag": "0005_dear_korg",
+      "breakpoints": true
+    }
+  ]
+}

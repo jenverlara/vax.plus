@@ -1,0 +1,1 @@
+ALTER TABLE "vaccinationSchedules" DROP COLUMN IF EXISTS "user_id";
