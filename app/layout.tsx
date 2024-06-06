@@ -1,5 +1,6 @@
 import CustomToaster from "@/providers/customToastProvider";
 import { SheetProvider } from "@/providers/sheetProvider";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import QueryProvider from "@/providers/queryProvider";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Inter } from "next/font/google";
@@ -23,9 +24,11 @@ export default function RootLayout({
       <html lang="en" suppressHydrationWarning>
         <body className={inter.className}>
           <QueryProvider>
-            <SheetProvider />
-            <CustomToaster />
-            {children}
+            <TooltipProvider>
+              <SheetProvider />
+              <CustomToaster />
+              {children}
+            </TooltipProvider>
           </QueryProvider>
         </body>
       </html>

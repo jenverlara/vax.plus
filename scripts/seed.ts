@@ -1,8 +1,8 @@
 import { categories, accounts, transactions } from "@/db/schema";
+import { convertAmountToMiliunits } from "@/lib/utils";
 import { eachDayOfInterval, format } from "date-fns";
 import { neon } from "@neondatabase/serverless";
 import { drizzle } from "drizzle-orm/neon-http";
-import { convertAmountToMiliunits } from "@/lib/utils";
 import { subDays } from "date-fns";
 import { config } from "dotenv";
 
@@ -11,7 +11,7 @@ config({ path: ".env.local" });
 const sql = neon(process.env.DATABASE_URL!);
 const db = drizzle(sql);
 
-const SEED_USER_ID = "user_2gIi20AGtokwJs0foSIlcj9k5ry";
+const SEED_USER_ID = "user_2hU1mtV2myQ9tDy3Q8Y04ePPxox";
 
 const SEED_CATEGORIES = [
   {

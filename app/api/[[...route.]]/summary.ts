@@ -179,6 +179,21 @@ const app = new Hono().get(
         ),
       );
 
+    const appointments = await db
+      .select({
+        id: vaccinationSchedules.id,
+        name: vaccinationSchedules.name,
+        date: vaccinationSchedules.date,
+      })
+      .from(vaccinationSchedules)
+      .where(
+        and(
+          eq(vaccinationSchedules.userId, auth.userId),
+          gte(vaccinationSchedules.date, startDate),
+          lte(vaccinationSchedules.date, endDate),
+        ),
+      );
+
     return c.json({
       data: {
         remainingAmount: currentPeriod.remaining,
@@ -190,6 +205,7 @@ const app = new Hono().get(
         categories: finalCategories,
         days,
         totalAppointments: totalAppointments[0].count,
+        appointments,
       },
     });
   },

@@ -41,6 +41,7 @@ export const useGetSummary = () => {
           expenses: convertAmountFromMiliunits(day.expenses),
         })),
         totalAppointments: data.totalAppointments,
+        appointments: data.appointments,
       };
     },
   });

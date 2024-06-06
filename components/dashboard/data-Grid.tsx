@@ -29,44 +29,46 @@ const DataGrid = () => {
   }
 
   return (
-    <div className="mb-8 grid grid-cols-1 gap-8 pb-2 lg:grid-cols-4">
-      <DataCard
-        title="Appointments"
-        value={data?.totalAppointments}
-        percentageChange={data?.remainingChange}
-        appointment={true}
-        icon={BsCalendar2DateFill}
-        variant="default"
-        dateRange={dateRangeLabel}
-      />
+    <>
+      <div className="mb-8 grid grid-cols-1 gap-8 pb-2 lg:grid-cols-4">
+        <DataCard
+          title="Appointments"
+          value={data?.totalAppointments}
+          percentageChange={data?.remainingChange}
+          appointment={true}
+          icon={BsCalendar2DateFill}
+          variant="default"
+          dateRange={dateRangeLabel}
+        />
 
-      <DataCard
-        title="Remaining"
-        value={data?.remainingAmount}
-        percentageChange={data?.remainingChange}
-        icon={FaPiggyBank}
-        variant="default"
-        dateRange={dateRangeLabel}
-      />
+        <DataCard
+          title="Remaining"
+          value={data?.remainingAmount}
+          percentageChange={data?.remainingChange}
+          icon={FaPiggyBank}
+          variant="default"
+          dateRange={dateRangeLabel}
+        />
 
-      <DataCard
-        title="Income"
-        value={data?.incomeAmount}
-        percentageChange={data?.incomeChange}
-        icon={FaArrowTrendUp}
-        variant="default"
-        dateRange={dateRangeLabel}
-      />
+        <DataCard
+          title="Income"
+          value={data?.incomeAmount}
+          percentageChange={data?.incomeChange}
+          icon={FaArrowTrendUp}
+          variant="default"
+          dateRange={dateRangeLabel}
+        />
 
-      <DataCard
-        title="Expenses"
-        value={data?.expensesAmount}
-        percentageChange={data?.expensesChange}
-        icon={FaArrowTrendDown}
-        variant="default"
-        dateRange={dateRangeLabel}
-      />
-    </div>
+        <DataCard
+          title="Expenses"
+          value={data?.expensesAmount}
+          percentageChange={data?.expensesChange}
+          icon={FaArrowTrendDown}
+          variant="default"
+          dateRange={dateRangeLabel}
+        />
+      </div>
+    </>
   );
 };
 
